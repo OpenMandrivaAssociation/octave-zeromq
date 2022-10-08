@@ -13,7 +13,7 @@ BuildRequires:	octave-devel >= 4.0.0
 BuildRequires:	pkgconfig(libzmq)
 
 Requires:	octave(api) = %{octave_api}
-Requires:	python3dist(zmq)
+Requires:	python3dist(pyzmq)
 
 Requires(post): octave
 Requires(postun): octave
