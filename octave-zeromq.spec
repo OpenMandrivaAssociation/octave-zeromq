@@ -4,7 +4,7 @@ Summary:	ZeroMQ bindings for GNU Octave
 Name:		octave-%{octpkg}
 Version:	1.5.5
 Release:	1
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPLv3+
 Group:		Sciences/Mathematics
@@ -20,8 +20,6 @@ Requires(postun): octave
 
 %description
 ZeroMQ bindings for GNU Octave.
-
-This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
