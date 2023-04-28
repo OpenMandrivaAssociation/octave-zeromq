@@ -1,19 +1,19 @@
 %global octpkg zeromq
 
 Summary:	ZeroMQ bindings for GNU Octave
-Name:		octave-%{octpkg}
+Name:		octave-zeromq
 Version:	1.5.5
-Release:	1
-Url:		https://packages.octave.org/%{octpkg}/
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
+Url:		https://packages.octave.org/zeromq/
+Source0:	https://downloads.sourceforge.net/octave/zeromq-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 4.0.0
+BuildRequires:  octave-devel >= 4.0.0
 BuildRequires:	pkgconfig(libzmq)
 
 Requires:	octave(api) = %{octave_api}
-Requires:	python3dist(pyzmq)
+Requires:	python%{pyver}dist(pyzmq)
 
 Requires(post): octave
 Requires(postun): octave
@@ -24,19 +24,16 @@ ZeroMQ bindings for GNU Octave.
 %files
 %license COPYING
 %doc NEWS
-%dir %{octpkglibdir}
-%{octpkglibdir}/*
 %dir %{octpkgdir}
 %{octpkgdir}/*
+%dir %{octpkglibdir}
+%{octpkglibdir}/*
 %{_metainfodir}/*.metainfo.xml
 
 #---------------------------------------------------------------------------
 
 %prep
 %autosetup -p1 -n %{octpkg}-%{version}
-
-# remove backup files
-#find . -name \*~ -delete
 
 %build
 %set_build_flags
