@@ -2,12 +2,12 @@
 
 Summary:	ZeroMQ bindings for GNU Octave
 Name:		octave-zeromq
-Version:	1.5.5
-Release:	2
+Version:	1.5.6
+Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/zeromq/
-Source0:	https://downloads.sourceforge.net/octave/zeromq-%{version}.tar.gz
+Source0:	https://github.com/gnu-octave/octave-%{octpkg}/releases/download/release-%{version}/%{octpkg}-%{version}.tar.gz
 
 BuildRequires:  octave-devel >= 4.0.0
 BuildRequires:	pkgconfig(libzmq)
