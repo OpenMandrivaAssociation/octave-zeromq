@@ -3,7 +3,7 @@
 Summary:	ZeroMQ bindings for GNU Octave
 Name:		octave-zeromq
 Version:	1.5.6
-Release:	1
+Release:	2
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/zeromq/
